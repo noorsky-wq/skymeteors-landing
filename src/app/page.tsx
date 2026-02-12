@@ -94,7 +94,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg border border-[rgb(var(--border))] bg-white shadow-sm">
                 {/* If you don’t have a hero image yet, keep the placeholder */}
                 <Image
-                  src="/hero.jpg"
+                  src="https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=1600&q=80"
                   alt="Skymeteors prototype"
                   width={900}
                   height={600}
