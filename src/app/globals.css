@@ -4,10 +4,11 @@
 
 :root{
   --bg: 248 250 252;      /* near-white */
-  --text: 11 18 32;       /* deep navy/charcoal */
+  --text: 10 18 36;       /* deep navy */
   --muted: 71 85 105;     /* slate */
   --border: 226 232 240;  /* soft border */
   --accent: 16 74 169;    /* EU blue */
+  --footer: 9 19 37;      /* deep footer navy */
 }
 
 html, body { height: 100%; }
@@ -18,7 +19,12 @@ body{
   font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* subtle technical grid background like your Emergent screenshot */
+.mono{
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+::selection { background: rgba(var(--accent), 0.16); }
+
 .grid-bg{
   background-image:
     linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
@@ -26,10 +32,61 @@ body{
   background-size: 56px 56px;
 }
 
-.mono{
-  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+.section{
+  padding: 96px 0;
 }
 
-/* nice focus + selection */
-::selection { background: rgba(var(--accent), 0.18); }
-a { text-decoration: none; }
+.section-border{
+  border-top: 1px solid rgb(var(--border));
+}
+
+.kicker{
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgb(var(--muted));
+}
+
+.card{
+  background: white;
+  border: 1px solid rgb(var(--border));
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(var(--accent), .45);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
+}
+
+.btn-primary{
+  background: rgb(var(--accent));
+  color: white;
+  border: 1px solid rgba(0,0,0,0);
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.btn-primary:hover{ opacity: .96; transform: translateY(-1px); }
+
+.btn-secondary{
+  background: white;
+  color: rgb(var(--text));
+  border: 1px solid rgb(var(--border));
+  transition: background .15s ease, transform .15s ease;
+}
+
+.btn-secondary:hover{ background: rgb(241 245 249); transform: translateY(-1px); }
+
+.input{
+  width: 100%;
+  border: 1px solid rgb(var(--border));
+  background: white;
+  padding: 12px 12px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input:focus{
+  border-color: rgba(var(--accent), .6);
+  box-shadow: 0 0 0 4px rgba(var(--accent), .10);
+}
