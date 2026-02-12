@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: 32 95 255;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background: #ffffff;
+  color: #0c1016;
+}
+
+.mono {
+  font-family: var(--font-mono), monospace;
+}
