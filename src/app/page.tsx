@@ -3,198 +3,155 @@ export default function Home() {
     <main className="min-h-screen">
 
       {/* HERO */}
-      <section className="px-6 py-28 border-b">
-        <div className="max-w-6xl mx-auto">
-          <p className="mono text-xs tracking-[0.2em] text-gray-500 uppercase">
+      <section className="relative px-6 py-32 overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600 opacity-20 blur-[160px]" />
+
+        <div className="relative max-w-6xl mx-auto">
+          <p className="mono text-xs tracking-[0.25em] text-gray-400 uppercase">
             Berlin • European-built autonomy
           </p>
 
-          <h1 className="mt-6 text-4xl sm:text-6xl font-semibold tracking-tight max-w-4xl">
+          <h1 className="mt-6 text-5xl sm:text-6xl font-semibold tracking-tight max-w-4xl leading-tight">
             Autonomy for environments where GPS fails.
           </h1>
 
-          <p className="mt-8 text-lg text-gray-600 max-w-3xl leading-relaxed">
+          <p className="mt-8 text-lg text-gray-400 max-w-3xl leading-relaxed">
             Skymeteors develops onboard aerial autonomy with 360° perception,
             real-time 3D mapping, and obstacle-aware navigation — engineered
             for operations where infrastructure is limited and reliability
-            matters.
+            defines mission success.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-wrap gap-4">
             <a
-              href="mailto:info@skymeteors.com?subject=Pilot Request — Skymeteors"
-              className="px-7 py-3 bg-[rgb(var(--accent))] text-white rounded-xl font-medium"
+              href="mailto:info@skymeteors.com"
+              className="px-8 py-4 bg-[rgb(var(--accent))] rounded-xl font-medium shadow-lg shadow-blue-900/40 transition hover:scale-[1.03]"
             >
               Request a Pilot
             </a>
+
             <a
               href="#contact"
-              className="px-7 py-3 border rounded-xl font-medium"
+              className="px-8 py-4 border border-white/20 rounded-xl font-medium transition hover:border-blue-500"
             >
               Contact
             </a>
           </div>
 
-          <div className="mt-12 text-sm text-gray-500">
+          <div className="mt-14 text-sm text-gray-500">
             Prototype validated • Pilot partnerships open
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
 
       {/* TECHNOLOGY */}
-      <section id="technology" className="px-6 py-24 border-b">
+      <section className="px-6 py-28">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold tracking-tight">
             Engineering autonomy from the sensor up.
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-3xl leading-relaxed">
-            Skymeteors integrates sensing, localization, mapping, and planning
-            into a low-latency onboard stack designed to operate in complex,
-            GPS-degraded environments.
+          <p className="mt-6 text-gray-400 max-w-3xl">
+            An integrated onboard stack combining sensing, localization,
+            mapping, and adaptive planning for complex GPS-degraded environments.
           </p>
 
-          <div className="mt-14 grid sm:grid-cols-3 gap-8">
-            <div>
+          <div className="mt-16 grid sm:grid-cols-3 gap-8">
+            <div className="card p-6 rounded-2xl">
               <h3 className="font-semibold text-lg">360° Perception</h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                Coverage-first sensing architecture combining LiDAR-centric
-                awareness and complementary vision systems.
+              <p className="mt-3 text-gray-400">
+                LiDAR-centric awareness combined with complementary vision
+                systems for full environmental coverage.
               </p>
             </div>
 
-            <div>
+            <div className="card p-6 rounded-2xl">
               <h3 className="font-semibold text-lg">
                 Real-Time Localization & Mapping
               </h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                Live odometry and 3D reconstruction enabling stable navigation
-                without GPS reliance.
+              <p className="mt-3 text-gray-400">
+                Live odometry and 3D reconstruction enabling stable
+                navigation without GPS reliance.
               </p>
             </div>
 
-            <div>
+            <div className="card p-6 rounded-2xl">
               <h3 className="font-semibold text-lg">
                 Obstacle-Aware Autonomy
               </h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                Onboard planning logic designed to react in real time to dynamic
-                environmental changes.
+              <p className="mt-3 text-gray-400">
+                Onboard planning logic reacting in real time to dynamic
+                operational environments.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
 
       {/* USE CASES */}
-      <section className="px-6 py-24 border-b">
+      <section className="px-6 py-28">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold tracking-tight">
             Built for missions where reliability matters.
           </h2>
 
-          <div className="mt-14 grid sm:grid-cols-3 gap-8">
-            <div>
+          <div className="mt-16 grid sm:grid-cols-3 gap-8">
+            <div className="card p-6 rounded-2xl">
               <h3 className="font-semibold text-lg">
                 Search & Rescue / Civil Protection
               </h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                Reliable navigation and scene understanding when infrastructure
-                is disrupted or unavailable.
+              <p className="mt-3 text-gray-400">
+                Reliable navigation and situational awareness when
+                infrastructure is disrupted or unavailable.
               </p>
             </div>
 
-            <div>
+            <div className="card p-6 rounded-2xl">
               <h3 className="font-semibold text-lg">
                 Critical Infrastructure Monitoring
               </h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                Autonomous inspection and perimeter awareness for industrial,
-                energy, and public facilities.
+              <p className="mt-3 text-gray-400">
+                Autonomous inspection and perimeter awareness for
+                industrial and energy facilities.
               </p>
             </div>
 
-            <div>
+            <div className="card p-6 rounded-2xl">
               <h3 className="font-semibold text-lg">
                 Security & Perimeter Monitoring
               </h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">
-                Resilient sensing and navigation for wide-area situational
-                awareness across complex operational sites.
+              <p className="mt-3 text-gray-400">
+                Wide-area situational awareness across complex operational sites.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
 
-      {/* PROTOTYPE STATUS */}
-      <section className="px-6 py-24 border-b">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Prototype Status
-          </h2>
-
-          <ul className="mt-10 space-y-4 text-gray-600 leading-relaxed max-w-3xl">
-            <li>• GPS-denied localization and mapping validated in prototype testing</li>
-            <li>• 360° sensing pipeline integrated for onboard awareness</li>
-            <li>• Autopilot integration with real-time pose feed</li>
-            <li>• Obstacle-aware navigation behaviors in active testing</li>
-            <li>• Demonstrations and technical evidence available on request</li>
-          </ul>
-
-          <p className="mt-10 text-sm text-gray-500 max-w-3xl">
-            Skymeteors develops autonomy technologies intended for civil
-            protection, infrastructure resilience, and safety-oriented
-            operations, aligned with European regulations and responsible-use
-            principles.
-          </p>
-        </div>
-      </section>
-
-
-      {/* ABOUT */}
-      <section className="px-6 py-24 border-b">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            About Skymeteors
-          </h2>
-
-          <p className="mt-6 text-gray-600 max-w-3xl leading-relaxed">
-            Skymeteors is a Berlin-based autonomy startup building resilient
-            aerial perception and navigation systems for demanding operational
-            environments.
-          </p>
-
-          <div className="mt-10">
-            <h3 className="font-semibold text-lg">Founder</h3>
-            <p className="mt-2 text-gray-600">
-              Jack Safia — Robotics, autonomy, and flight systems integration.
-            </p>
-          </div>
-        </div>
-      </section>
-
-
-      {/* CONTACT */}
-      <section id="contact" className="px-6 py-24">
+      {/* FOOTER CTA */}
+      <section id="contact" className="px-6 py-28">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold tracking-tight">
             Request a Pilot Discussion
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-3xl leading-relaxed">
-            If you are evaluating autonomy for civil protection, infrastructure
-            monitoring, or secure site operations, we are open to pilot
-            discussions.
+          <p className="mt-6 text-gray-400 max-w-3xl">
+            If you are evaluating autonomy for civil protection,
+            infrastructure monitoring, or secure site operations,
+            we are open to pilot discussions.
           </p>
 
           <div className="mt-10">
             <a
               href="mailto:info@skymeteors.com"
-              className="text-lg font-semibold underline"
+              className="text-lg font-semibold text-blue-400"
             >
               info@skymeteors.com
             </a>
