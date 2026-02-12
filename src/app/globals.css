@@ -7,11 +7,27 @@
 }
 
 body {
+  background: #0a0f18;
+  color: #e5e7eb;
   font-family: var(--font-inter), system-ui, sans-serif;
-  background: #ffffff;
-  color: #0c1016;
 }
 
 .mono {
   font-family: var(--font-mono), monospace;
+}
+
+.section-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--accent), 0.6);
 }
