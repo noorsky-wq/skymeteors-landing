@@ -1,19 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, Building2, Shield, Eye, MapPin, Workflow, Cpu, CheckCircle, Mail, MapPinIcon } from 'lucide-react';
-import React, { useState } from 'react';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
-  React.useEffect(() => {
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 50);
-  };
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -73,11 +72,9 @@ export default function Home() {
             
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg relative overflow-hidden">
-                {/* Drone image placeholder - will use real image later */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                   [Drone Image]
                 </div>
-                {/* Data overlays */}
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-mono">
                   SYS:ACTIVE@2.5200°N
                 </div>
@@ -93,7 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Technology Section */}
+      {/* Technology */}
       <section id="technology" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
@@ -128,7 +125,6 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12">Built for Resilience</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* SYS-01 */}
             <div className="bg-white border border-gray-200 p-8 relative">
               <div className="absolute -top-3 -right-3 bg-gray-100 px-3 py-1 text-xs font-mono">SYS-01</div>
               <div className="w-12 h-12 bg-sky-blue/10 border-2 border-sky-blue/20 flex items-center justify-center mb-6">
@@ -140,7 +136,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* SYS-02 */}
             <div className="bg-white border border-gray-200 p-8 relative">
               <div className="absolute -top-3 -right-3 bg-gray-100 px-3 py-1 text-xs font-mono">SYS-02</div>
               <div className="w-12 h-12 bg-sky-blue/10 border-2 border-sky-blue/20 flex items-center justify-center mb-6">
@@ -152,7 +147,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* SYS-03 */}
             <div className="bg-white border border-gray-200 p-8 relative">
               <div className="absolute -top-3 -right-3 bg-gray-100 px-3 py-1 text-xs font-mono">SYS-03</div>
               <div className="w-12 h-12 bg-sky-blue/10 border-2 border-sky-blue/20 flex items-center justify-center mb-6">
@@ -174,7 +168,6 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12">Use Cases</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
             <div className="border border-gray-200 overflow-hidden">
               <div className="aspect-[4/3] bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-gray-400">
                 [Helicopter Image]
@@ -190,7 +183,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="border border-gray-200 overflow-hidden">
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center text-gray-400">
                 [Bridge Image]
@@ -206,7 +198,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="border border-gray-200 overflow-hidden">
               <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center text-gray-400">
                 [Security Image]
@@ -229,7 +220,6 @@ export default function Home() {
       <section id="proof" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Validation */}
             <div>
               <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">VALIDATION</div>
               <h2 className="text-4xl font-bold mb-8">Prototype Status</h2>
@@ -252,7 +242,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Differentiators */}
             <div>
               <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">DIFFERENTIATORS</div>
               <h2 className="text-4xl font-bold mb-8">Why Skymeteors</h2>
@@ -327,7 +316,6 @@ export default function Home() {
       <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Left */}
             <div>
               <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">GET STARTED</div>
               <h2 className="text-4xl font-bold mb-6">Partner with Skymeteors</h2>
@@ -346,7 +334,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Form */}
             <div className="bg-white border border-gray-200 p-8">
               <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
