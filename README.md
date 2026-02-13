@@ -1,3 +1,0 @@
-# skymeteors-landing
-sky
-.....
