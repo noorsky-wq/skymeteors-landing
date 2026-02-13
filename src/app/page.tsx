@@ -2,15 +2,18 @@
 
 import { useState } from 'react';
 import { Search, Building2, Shield, Eye, MapPin, Workflow, Cpu, CheckCircle, Mail, MapPinIcon } from 'lucide-react';
+import React, { useState } from 'react';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', () => {
-      setScrolled(window.scrollY > 50);
-    });
-  }
+  React.useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 50);
+  };
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
   return (
     <>
