@@ -71,10 +71,12 @@ export default function Home() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                  [Drone Image]
-                </div>
+              <div className="aspect-[4/3] rounded-lg relative overflow-hidden">
+  <img 
+    src="/images/drone-hero.jpg" 
+    alt="Tactical Drone" 
+    className="w-full h-full object-cover"
+  />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-mono">
                   SYS:ACTIVE@2.5200°N
                 </div>
@@ -169,9 +171,13 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="border border-gray-200 overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-gray-400">
-                [Helicopter Image]
-              </div>
+              <div className="aspect-[4/3] overflow-hidden">
+  <img 
+    src="/images/helicopter-rescue.jpg" 
+    alt="Search and Rescue" 
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Search className="w-5 h-5 text-sky-blue" />
@@ -184,9 +190,13 @@ export default function Home() {
             </div>
 
             <div className="border border-gray-200 overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center text-gray-400">
-                [Bridge Image]
-              </div>
+              <div className="aspect-[4/3] overflow-hidden">
+  <img 
+    src="/images/bridge-infrastructure.jpg" 
+    alt="Infrastructure Monitoring" 
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Building2 className="w-5 h-5 text-sky-blue" />
@@ -199,9 +209,13 @@ export default function Home() {
             </div>
 
             <div className="border border-gray-200 overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center text-gray-400">
-                [Security Image]
-              </div>
+              <div className="aspect-[4/3] overflow-hidden">
+  <img 
+    src="/images/security-facility.jpg" 
+    alt="Security Monitoring" 
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Shield className="w-5 h-5 text-sky-blue" />
