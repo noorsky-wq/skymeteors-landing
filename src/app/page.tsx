@@ -77,15 +77,6 @@ export default function Home() {
                   alt="Tactical Drone" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 left-4 bg-nato-surface/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-mono text-nato-accent border border-nato-border">
-                  SYS:ACTIVE@2.5200°N
-                </div>
-                <div className="absolute bottom-4 left-4 bg-nato-surface/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-mono text-nato-text border border-nato-border">
-                  ~120M
-                </div>
-                <div className="absolute bottom-4 right-4 bg-nato-surface/90 backdrop-blur-sm px-3 py-1.5 rounded text-xs font-mono text-nato-text border border-nato-border">
-                  ALT:120M 13.4050°E
-                </div>
               </div>
             </div>
           </div>
@@ -127,8 +118,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12 text-nato-text">Built for Resilience</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-nato-surface border border-nato-border p-8 relative hover:border-nato-accent transition-colors">
-              <div className="absolute -top-3 -right-3 bg-nato-bg px-3 py-1 text-xs font-mono text-nato-accent border border-nato-border">SYS-01</div>
+            <div className="bg-nato-surface border border-nato-border p-8 hover:border-nato-accent transition-colors">
               <div className="w-12 h-12 bg-nato-accent/10 border-2 border-nato-accent/30 flex items-center justify-center mb-6">
                 <Eye className="w-6 h-6 text-nato-accent" />
               </div>
@@ -138,8 +128,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-nato-surface border border-nato-border p-8 relative hover:border-nato-accent transition-colors">
-              <div className="absolute -top-3 -right-3 bg-nato-bg px-3 py-1 text-xs font-mono text-nato-accent border border-nato-border">SYS-02</div>
+            <div className="bg-nato-surface border border-nato-border p-8 hover:border-nato-accent transition-colors">
               <div className="w-12 h-12 bg-nato-accent/10 border-2 border-nato-accent/30 flex items-center justify-center mb-6">
                 <MapPin className="w-6 h-6 text-nato-accent" />
               </div>
@@ -149,8 +138,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-nato-surface border border-nato-border p-8 relative hover:border-nato-accent transition-colors">
-              <div className="absolute -top-3 -right-3 bg-nato-bg px-3 py-1 text-xs font-mono text-nato-accent border border-nato-border">SYS-03</div>
+            <div className="bg-nato-surface border border-nato-border p-8 hover:border-nato-accent transition-colors">
               <div className="w-12 h-12 bg-nato-accent/10 border-2 border-nato-accent/30 flex items-center justify-center mb-6">
                 <Workflow className="w-6 h-6 text-nato-accent" />
               </div>
